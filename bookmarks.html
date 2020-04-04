@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New App</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header>
+    <h1>News App</h1>
+    <nav>
+      <ul>
+        <li><a href="">News</a></li>
+        <li><a href="">Bookmarks</a></li>
+      </ul>
+    </nav>
+    <div class="toggle-theme">
+      <button>Toogle Theme</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="news">
+      
+    </div>
+  </div>
+
+  <script>
+    const news = document.querySelector('.news')
+    const articles = JSON.parse(localStorage.getItem('bookmarks'))
+       let newsItem = ''
+       localStorage.setItem('bookmarks', JSON.stringify(articles))
+       articles.forEach(article => {
+         newsItem += `
+          <div class="news-item">
+            <h1> ${article.title} </h1>
+            <p> ${article.description} </p>
+            <a href="${article.url}"> Visit Link </a>
+          </div>
+         `
+       });
+
+       news.innerHTML = newsItem
+  </script>
+</body>
+</html>
