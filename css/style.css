@@ -23,3 +23,7 @@ header {
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
 }
+
+.news h1 {
+  font-size: 1.5rem;
+}
