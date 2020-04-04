@@ -8,7 +8,7 @@ fetch(URL)
        console.log(response)
        const articles = response.articles
        let newsItem = ''
-
+       localStorage.setItem('bookmarks', JSON.stringify(articles))
        articles.forEach(article => {
          newsItem += `
           <div class="news-item">
@@ -20,8 +20,8 @@ fetch(URL)
        });
 
        news.innerHTML = newsItem
-       console.log(newsItem)
    })
    .catch(error => {
        // handle failed requests here ...
    })
+
