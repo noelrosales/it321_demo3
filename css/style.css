@@ -22,4 +22,36 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
+  margin-top: 1rem;
 }
+
+.news .news-item {
+  padding: 1rem;
+  border: 1px solid #333;
+}
+
+.news h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem;
+}
+
+nav ul li a:hover {
+  background: #fff;
+  color: green;
+}
+
